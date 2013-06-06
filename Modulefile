@@ -1,0 +1,8 @@
+name 'slde-rohrschach-puppet-solo'
+version '0.0.1'
+source 'https://github.com/slde-rohrschach/puppet-solo'
+author 'Lukas Sadzik'
+license 'MIT'
+summary 'Puppet helper for single machines'
+description 'A tiny puppet module, that will help you running puppet on a single machine without puppet master'
+project_page 'https://github.com/slde-rohrschach/puppet-solo'
