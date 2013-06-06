@@ -10,9 +10,15 @@ class puppetsolo::repository (
         branch => $branch,
     }
 
+    exec { 'init_puppet_repo_submodules' :
+        cwd => $path,
+        command => "${git::params::bin} submodule init",
+        require => Git::Repo['puppet'],
+    }    
+
     exec { 'update_puppet_repo_submodules' :
         cwd => $path,
-        command => "${git::params::bin} submodule update --recursive",
-        require => Git::Repo['puppet'],
+        command => "${git::params::bin} submodule init",
+        require => Exec['init_puppet_repo_submodules']
     }    
 }
