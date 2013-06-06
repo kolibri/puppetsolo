@@ -10,6 +10,8 @@ class puppetsolo::repository (
         branch => $branch,
     }
 
+    # todo: find a workaround for this awfull three commands o_O
+
     exec { 'init_puppet_repo_submodules' :
         cwd => $path,
         command => "${git::params::bin} submodule init",
