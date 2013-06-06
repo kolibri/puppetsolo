@@ -26,7 +26,7 @@ class puppetsolo::repository (
 
     exec { 'pull_puppet_repo_submodules' :
         cwd => $path,
-        command => "${git::params::bin} submodule foreach git pull origin master",
+        command => "${git::params::bin} submodule foreach git pull",
         require => Exec['update_puppet_repo_submodules']
     }    
 }

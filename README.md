@@ -45,4 +45,6 @@ class { 'puppetsolo::repository':
 
 Be sure, your manifest and module path fit to the repository.
 
+This module assumes, that you organize your puppet modules as git submodules. It will update them at each run.
+
 *Hint: If you made changes to your repository, it wil need at least two puppet runs, to become this changes run by puppet. One, to fetch the changes, and one to operate them.*
