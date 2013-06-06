@@ -23,7 +23,7 @@ class { 'puppetsolo':
 }
 ```
 
-*Hint: You can add more than one modulepath:*
+*Hint: You can add more than one modulepath by seperating them with a `:`:*
 ```puppet
 class { 'puppetsolo':
     $modulepath => '/etc/puppet/modules/:/var/puppet/mymodules:/and/one/more/modulepath'
@@ -33,11 +33,11 @@ class { 'puppetsolo':
 How to set a self updating git repository
 -----------------------------------------
 
-If you have your puppet manifests and modules in a git repository, and want puppet update them, add a block like folowing (again, defaults are in the example. You cann ommit them, if they fit to you)
+If you have your puppet manifests and modules in a git repository, and want puppet update them, add a block like following (again, defaults are in the example. You can ommit them, if they fit to you)
 ```puppet
 class { 'puppetsolo::repository':
+    source => , # this has no default and should be the path to your repository. like git@github.com:slde-rohrschach/puppetsolo.git
     path => '/var/puppet', # the target path, where the repository should be placed
-    source => false, # this has to be the path to your repository
     branch => 'master' # the branch, you want to use
 }
 

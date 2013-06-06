@@ -1,6 +1,6 @@
 class puppetsolo::repository (
+    $source,
     $path = '/var/puppet',
-    $source = false,
     $branch = 'master'
 ){
     git::repo{ 'puppet':
