@@ -2,7 +2,7 @@ class puppetsolo (
     $user = root,
     $manifest = '/var/puppet/manifests/site.pp',
     $modulepath = '/etc/puppet/modules/',
-    $logfile = '/var/logs/puppet_run.log',
+    $logfile = '/var/log/puppet_run.log',
 )
 {
     file { '/var/crons':
