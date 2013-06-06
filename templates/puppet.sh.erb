@@ -1,7 +1,7 @@
 #!/bin/bash
-
 # THIS FILE IS MANAGED BY PUPPET
 
 LOGFILE=<%= logfile -%>
+
 date &>> $LOGFILE
 puppet apply --modulepath=<%= modulepath -%> <%= manifest -%> &>> $LOGFILE
