@@ -16,17 +16,17 @@ to your manifest.
 You can set following parameters (defaults are in the example)
 ```puppet
 class { 'puppetsolo':
-    user => root,
-    manifest => '/var/puppet/manifests/site.pp',
-    modulepath => '/etc/puppet/modules/',
-    logfile => '/var/logs/puppet_run.log',
+  user       => root,
+  manifest   => '/var/puppet/manifests/site.pp',
+  modulepath => '/etc/puppet/modules/',
+  logfile    => '/var/logs/puppet_run.log',
 }
 ```
 
 *Hint: You can add more than one modulepath by seperating them with a `:`:*
 ```puppet
 class { 'puppetsolo':
-    $modulepath => '/etc/puppet/modules/:/var/puppet/mymodules:/and/one/more/modulepath'
+  $modulepath => '/etc/puppet/modules/:/var/puppet/mymodules:/and/one/more/modulepath'
 }
 ```
 
@@ -36,9 +36,9 @@ How to set a self updating git repository
 If you have your puppet manifests and modules in a git repository, and want puppet update them, add a block like following (again, defaults are in the example. You can ommit them, if they fit to you)
 ```puppet
 class { 'puppetsolo::repository':
-    source => , # this has no default and should be the path to your repository. like git@github.com:slde-rohrschach/puppetsolo.git
-    path => '/var/puppet', # the target path, where the repository should be placed
-    branch => 'master' # the branch, you want to use
+  source => , # this has no default and should be the path to your repository. like git@github.com:slde-rohrschach/puppetsolo.git
+  path   => '/var/puppet', # the target path, where the repository should be placed
+  branch => 'master' # the branch, you want to use
 }
 
 ```
