@@ -4,4 +4,5 @@
 LOGFILE=<%= logfile -%>
 
 date &>> $LOGFILE
+<%= update_script -%>
 puppet apply --modulepath=<%= modulepath -%> <%= manifest -%> &>> $LOGFILE

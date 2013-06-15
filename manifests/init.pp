@@ -1,8 +1,9 @@
 class puppetsolo (
   $user = root,
-  $manifest = '/var/puppet/manifests/site.pp',
-  $modulepath = '/etc/puppet/modules/',
-  $logfile = '/var/log/puppet/puppetsolo_run.log',
+  $manifest      = '/var/puppet/manifests/site.pp',
+  $modulepath    = '/etc/puppet/modules/',
+  $logfile       = '/var/log/puppet/puppetsolo_run.log',
+  $update_script = '/home/ultima/puppet/git_submodule_update.sh'
 ){
   file { '/var/crons':
     ensure  => directory,

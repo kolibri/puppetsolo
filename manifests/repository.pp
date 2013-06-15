@@ -18,15 +18,15 @@ class puppetsolo::repository (
     require => Git::Repo['puppet'],
   }  
 
-  exec { 'update_puppet_repo_submodules' :
-    cwd     => $path,
-    command => "${git::params::bin} submodule update",
-    require => Exec['init_puppet_repo_submodules']
-  }  
+#  exec { 'update_puppet_repo_submodules' :
+#    cwd     => $path,
+#    command => "${git::params::bin} submodule update",
+#    require => Exec['init_puppet_repo_submodules']
+#  }
 
-  exec { 'pull_puppet_repo_submodules' :
-    cwd     => $path,
-    command => "${git::params::bin} submodule foreach git pull",
-    require => Exec['update_puppet_repo_submodules']
-  }  
+#  exec { 'pull_puppet_repo_submodules' :
+#    cwd     => $path,
+#    command => "${git::params::bin} submodule foreach git pull",
+#    require => Exec['update_puppet_repo_submodules']
+#  }  
 }
